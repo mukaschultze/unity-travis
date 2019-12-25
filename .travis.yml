@@ -1,4 +1,8 @@
-os: windows
+os: 
+  - windows
+  - osx
+  - linux
+
 language: bash
 sudo: true
 
