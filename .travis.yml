@@ -1,7 +1,21 @@
 language: bash
 sudo: false
 
-notifications:
-  email:
-    on_success: never
-    on_failure: change
+addons:
+  apt:
+    packages:
+    - ruby
+
+env:
+  # - UNITY_VERSION=latest
+  # - UNITY_VERSION=latest_stable
+  # - UNITY_VERSION=latest_beta
+  # - UNITY_VERSION=latest_patch
+  - UNITY_VERSION=2019.2.11f1
+
+before_install: ./ci/before_install.sh
+install: ./ci/install.sh
+
+cache:
+  directories:
+    - ~/Downloads/Unity_Packages/
