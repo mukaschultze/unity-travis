@@ -11,7 +11,8 @@ env:
   # - UNITY_VERSION=latest_stable
   # - UNITY_VERSION=latest_beta
   # - UNITY_VERSION=latest_patch
-  - UNITY_VERSION=2019.2.11f1
+  - UNITY_VERSION=2019.1.0f2
+  # - UNITY_VERSION=2019.2.11f1
 
 before_install: chmod +x ./ci/*.sh && ./ci/before_install.sh
 install: ./ci/install.sh
