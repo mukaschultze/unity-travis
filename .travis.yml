@@ -19,8 +19,11 @@ env:
   - UNITY_VERSION=2019.1.0f2
   # - UNITY_VERSION=2019.2.11f1
 
-before_install: chmod +x ./ci/*.sh && ./ci/before_install.sh
-install: ./ci/install.sh
+before_install:
+  - chmod +x ./ci/*.sh
+  - ./ci/before_install.sh
+install:
+  - ./ci/install.sh
 
 cache:
   directories:
